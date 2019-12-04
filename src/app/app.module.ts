@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RestaurantListComponent } from './restaurant-list/restaurant-list.component';
 import {MatToolbarModule, MatCardModule} from '@angular/material';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {MatToolbarModule, MatCardModule} from '@angular/material';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FontAwesomeModule,
     MatToolbarModule,
     MatCardModule
   ],
