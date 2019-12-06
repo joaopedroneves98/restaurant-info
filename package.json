@@ -32,6 +32,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "ngx-cookie-service": "^2.2.0",
     "path": "^0.12.7",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
