@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { ChefService } from '../chef.service';
 import { Observable } from 'rxjs';
 
@@ -23,14 +23,13 @@ export class AddRestaurantDialogComponent implements OnInit {
 
   constructor(
     private chefService: ChefService,
-    private fb: FormBuilder,
     private dialogRef: MatDialogRef<AddRestaurantDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data: DialogData) {
-    this.form = fb.group({
-      name: '',
-      address: '',
-      description: '',
-      chef: []
+    this.form = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+      address: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
+      chef: new FormControl([])
     });
   }
 
@@ -45,5 +44,9 @@ export class AddRestaurantDialogComponent implements OnInit {
 
   close() {
     this.dialogRef.close();
+  }
+
+  public hasError = (controlName: string, errorName: string) => {
+    return this.form.controls[controlName].hasError(errorName);
   }
 }
