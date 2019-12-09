@@ -11,7 +11,8 @@ import {
   MatIconModule,
   MatDialogModule,
   MatSnackBarModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatSelectModule
 } from '@angular/material';
 
 import { CookieService } from 'ngx-cookie-service';
@@ -52,7 +53,8 @@ import { AddRestaurantDialogComponent } from './add-restaurant-dialog/add-restau
     MatIconModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSelectModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],

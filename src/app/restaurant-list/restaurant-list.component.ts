@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestaurantService } from '../restaurant.service';
-import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkedAlt, faAsterisk } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs';
 import { UserService } from '../user.service';
 import { SnackbarService } from '../snackbar.service';
@@ -13,6 +13,7 @@ import { SnackbarService } from '../snackbar.service';
 export class RestaurantListComponent implements OnInit {
 
   faMapMarkedAlt = faMapMarkedAlt;
+  faAsterisk = faAsterisk;
 
   isLoggedIn$: Observable<boolean>;
 

@@ -10,13 +10,6 @@ import { filter } from 'rxjs/operators';
 import { RestaurantService } from '../restaurant.service';
 import { SnackbarService } from '../snackbar.service';
 
-export interface DialogData {
-  name: string;
-  address: string;
-  description: string;
-}
-
-
 @Component({
   selector: 'app-add-restaurant',
   templateUrl: './add-restaurant.component.html',
@@ -25,9 +18,6 @@ export interface DialogData {
 export class AddRestaurantComponent implements OnInit {
 
   isLoggedIn$: Observable<boolean>;
-  name: string;
-  address: string;
-  description: string;
 
   constructor(
     private userService: UserService,
@@ -50,7 +40,8 @@ export class AddRestaurantComponent implements OnInit {
     dialogConfig.data = {
       name: '',
       address: '',
-      description: ''
+      description: '',
+      chef: []
     };
 
     dialogRef.afterClosed().pipe(filter(name => name)).subscribe(

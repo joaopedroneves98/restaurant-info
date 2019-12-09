@@ -1,3 +1,7 @@
-body {
-    width: 30%;
+.dialog-container {
+    width: 500px;
+}
+
+.mat-form-field {
+    width: 100%;
 }
