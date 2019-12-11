@@ -1,5 +1,6 @@
 <!-- <app-add-restaurant></app-add-restaurant> -->
 <p class="content-link">Content retrieved from: <a href="{{url}}" target="_blank">{{url}}</a></p>
+<mat-spinner class="spinner" *ngIf="isLoading | async" [diameter]="70" mode="indeterminate" color="accent"></mat-spinner>
 <div class="content">
     <mat-card class="example-card" *ngFor="let res of restaurants$ | async">
         <mat-card-header>

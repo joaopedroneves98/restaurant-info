@@ -12,7 +12,8 @@ import {
   MatDialogModule,
   MatSnackBarModule,
   MatTooltipModule,
-  MatSelectModule
+  MatSelectModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 import { CookieService } from 'ngx-cookie-service';
@@ -56,7 +57,8 @@ import { HomeComponent } from './home/home.component';
     MatDialogModule,
     MatSnackBarModule,
     MatTooltipModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],

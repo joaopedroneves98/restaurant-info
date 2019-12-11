@@ -25,7 +25,7 @@ export class RestaurantService {
   }
 
   getRestaurants() {
-    this.http.get(this.getUrl(), {
+    return this.http.get(this.getUrl(), {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + this.userService.token,
