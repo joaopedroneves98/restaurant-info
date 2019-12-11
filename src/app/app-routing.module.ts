@@ -4,10 +4,11 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RestaurantListComponent } from './restaurant-list/restaurant-list.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  { path: '', component: RestaurantListComponent},
+  { path: '', component: HomeComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: PageNotFoundComponent },

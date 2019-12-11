@@ -12,7 +12,8 @@ import {
   MatDialogModule,
   MatSnackBarModule,
   MatTooltipModule,
-  MatSelectModule
+  MatSelectModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 import { CookieService } from 'ngx-cookie-service';
@@ -26,6 +27,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { AddRestaurantComponent } from './add-restaurant/add-restaurant.component';
 import { AddRestaurantDialogComponent } from './add-restaurant-dialog/add-restaurant-dialog.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { AddRestaurantDialogComponent } from './add-restaurant-dialog/add-restau
     AppHeaderComponent,
     AddRestaurantComponent,
     AddRestaurantDialogComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { AddRestaurantDialogComponent } from './add-restaurant-dialog/add-restau
     MatDialogModule,
     MatSnackBarModule,
     MatTooltipModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
