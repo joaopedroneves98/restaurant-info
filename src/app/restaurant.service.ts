@@ -25,7 +25,12 @@ export class RestaurantService {
   }
 
   getRestaurants() {
-    this.http.get(this.getUrl()).subscribe((data: any[]) => { this.restaurantList.next(data); });
+    this.http.get(this.getUrl(), {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + this.userService.token,
+      })
+    }).subscribe((data: any[]) => { this.restaurantList.next(data); });
   }
 
   createRestaurant(restaurant) {

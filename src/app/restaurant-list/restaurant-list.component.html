@@ -1,4 +1,4 @@
-<app-add-restaurant></app-add-restaurant>
+<!-- <app-add-restaurant></app-add-restaurant> -->
 <p class="content-link">Content retrieved from: <a href="{{url}}" target="_blank">{{url}}</a></p>
 <div class="content">
     <mat-card class="example-card" *ngFor="let res of restaurants$ | async">
@@ -15,9 +15,9 @@
                 {{res.description}}
             </p>
         </mat-card-content>
-        <mat-card-actions *ngIf="isLoggedIn$ | async">
+        <!-- <mat-card-actions *ngIf="isLoggedIn$ | async">
             <button mat-button (click)="deleteRestaurant(res)">Remove</button>
-        </mat-card-actions>
+        </mat-card-actions> -->
     </mat-card>
 
 </div>
