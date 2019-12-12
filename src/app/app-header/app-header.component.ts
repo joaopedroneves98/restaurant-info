@@ -25,12 +25,12 @@ export class AppHeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.pageService.getLoggedOutHeaders().subscribe((data) => {
-      this.loggedOutHeaders = data;
-    });
-    this.pageService.getLoggedInHeaders().subscribe((data) => {
-      this.loggedInHeaders = data;
-    });
+    // this.pageService.getLoggedOutHeaders().subscribe((data) => {
+    //   this.loggedOutHeaders = data;
+    // });
+    // this.pageService.getLoggedInHeaders().subscribe((data) => {
+    //   this.loggedInHeaders = data;
+    // });
     this.isLoggedIn$ = this.userService.isLoggedIn;
   }
 
