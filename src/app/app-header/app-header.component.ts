@@ -19,6 +19,8 @@ export class AppHeaderComponent implements OnInit {
 
   faUtensils = faUtensils;
 
+  headers: any = [];
+
   constructor(
     private userService: UserService,
     private pageService: PageService
@@ -32,6 +34,9 @@ export class AppHeaderComponent implements OnInit {
     //   this.loggedInHeaders = data;
     // });
     this.isLoggedIn$ = this.userService.isLoggedIn;
+    this.pageService.getTestHeaders().subscribe((headers: any) => {
+      this.headers = headers[0].menu[0].menuoption;
+    });
   }
 
   onLogout() {
