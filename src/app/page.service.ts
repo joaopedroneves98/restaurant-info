@@ -17,7 +17,14 @@ export class PageService {
 
       case 'headers_log_out':
         return isDevMode() ? 'http://localhost:1337/headersloggedouts/' : 'https://restaurant-cms-strapi.herokuapp.com/headersloggedouts/';
+
+      case 'headers':
+        return isDevMode() ? 'http://localhost:1337/headers/' : 'https://restaurant-cms-strapi.herokuapp.com/headers/';
     }
+  }
+
+  getTestHeaders() {
+    return this.http.get(this.getUrl('headers'));
   }
 
   getLoggedInHeaders() {

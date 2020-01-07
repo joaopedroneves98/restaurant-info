@@ -28,6 +28,7 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 import { AddRestaurantComponent } from './add-restaurant/add-restaurant.component';
 import { AddRestaurantDialogComponent } from './add-restaurant-dialog/add-restaurant-dialog.component';
 import { HomeComponent } from './home/home.component';
+import { DynamicPageComponent } from './dynamic-page/dynamic-page.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { HomeComponent } from './home/home.component';
     AddRestaurantComponent,
     AddRestaurantDialogComponent,
     HomeComponent,
+    DynamicPageComponent,
   ],
   imports: [
     BrowserModule,
