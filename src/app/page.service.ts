@@ -10,6 +10,8 @@ export class PageService {
     private http: HttpClient
   ) { }
 
+  pages = [];
+
   getUrl(component) {
     switch (component) {
       case 'headers_log_in':
@@ -20,11 +22,33 @@ export class PageService {
 
       case 'headers':
         return isDevMode() ? 'http://localhost:1337/headers/' : 'https://restaurant-cms-strapi.herokuapp.com/headers/';
+
+      case 'pages':
+        return isDevMode() ? 'http://localhost:1337/paginas/' : 'https://restaurant-cms-strapi.herokuapp.com/paginas/';
+
     }
   }
 
   getTestHeaders() {
     return this.http.get(this.getUrl('headers'));
+  }
+
+  setPages(pages) {
+    this.pages = pages;
+  }
+
+  getPage(slug: string) {
+    let selectedPage: any;
+    this.pages.forEach(page => {
+      if (page.slug === slug) {
+        selectedPage = page;
+      }
+    });
+    return selectedPage;
+  }
+
+  getPages() {
+    return this.http.get(this.getUrl('pages'));
   }
 
   getLoggedInHeaders() {

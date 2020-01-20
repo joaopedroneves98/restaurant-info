@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RestaurantListComponent } from './restaurant-list/restaurant-list.component';
 import { HomeComponent } from './home/home.component';
 import { DynamicPageComponent } from './dynamic-page/dynamic-page.component';
+import { ContentPageComponent } from './content-page/content-page.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'page', component: DynamicPageComponent },
+  { path: 'content/:slug', component: ContentPageComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

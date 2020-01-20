@@ -4,12 +4,7 @@
             <fa-icon [icon]="faUtensils"></fa-icon>&nbsp;Registered Restaurants
         </button>
     </span>
-    <span class="example-spacer"></span>
-    <span *ngFor="let head of headers">
-        <button mat-button matTooltip="{{head.text}}" [routerLink]="head.link">
-            {{head.text}}
-        </button>
-    </span>
+
     <span class="example-spacer"></span>
     <!-- <div *ngIf="isLoggedIn$ | async; else loggedIn">
         <div *ngFor="let head of loggedInHeaders">
@@ -22,7 +17,15 @@
             <button mat-button [routerLink]="head.url">{{head.name}}</button>
         </div>
     </ng-template> -->
-    <button mat-button (click)="onLogout()" *ngIf="isLoggedIn$ | async; else loggedIn">Logout</button>
+    <div *ngIf="isLoggedIn$ | async; else loggedIn">
+        <span class="example-spacer"></span>
+        <span *ngFor="let head of headers">
+            <button mat-button matTooltip="{{head.titulo}}" routerLink="content/{{head.slug}}">
+                {{head.titulo}}
+            </button>
+        </span>
+        <button mat-button (click)="onLogout()">Logout</button>
+    </div>
     <ng-template #loggedIn>
         <button mat-button [routerLink]="['/login']">Login</button>
         <button mat-button [routerLink]="['/register']">Register</button>

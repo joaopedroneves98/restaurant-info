@@ -29,6 +29,7 @@ import { AddRestaurantComponent } from './add-restaurant/add-restaurant.componen
 import { AddRestaurantDialogComponent } from './add-restaurant-dialog/add-restaurant-dialog.component';
 import { HomeComponent } from './home/home.component';
 import { DynamicPageComponent } from './dynamic-page/dynamic-page.component';
+import { ContentPageComponent } from './content-page/content-page.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { DynamicPageComponent } from './dynamic-page/dynamic-page.component';
     AddRestaurantDialogComponent,
     HomeComponent,
     DynamicPageComponent,
+    ContentPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -34,8 +34,9 @@ export class AppHeaderComponent implements OnInit {
     //   this.loggedInHeaders = data;
     // });
     this.isLoggedIn$ = this.userService.isLoggedIn;
-    this.pageService.getTestHeaders().subscribe((headers: any) => {
-      this.headers = headers[0].menu[0].menuoption;
+    this.pageService.getPages().subscribe((headers: any) => {
+      this.headers = headers;
+      this.pageService.setPages(headers);
     });
   }
 

@@ -1,0 +1,51 @@
+<div class="page">
+    <h1>{{pageData.titulo}}</h1>
+    <p>{{pageData.description}}</p>
+
+
+    <div class="content-card">
+        <div *ngFor="let component of components">
+            <div *ngIf="component.__component==='page-components.card'">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <fa-icon [icon]="faAsterisk"></fa-icon>&nbsp;{{component.title}}
+                        </mat-card-title>
+                        <mat-card-subtitle>{{component.address}}&nbsp;
+                            <a href="https://www.google.pt/maps/place/{{component.address}}" target="_blank">
+                                <fa-icon [icon]="faMapMarkedAlt"></fa-icon>
+                            </a>
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{component.description}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div *ngIf="component.__component==='page-components.text-card'">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{component.title}}
+                        </mat-card-title>
+                        <mat-card-subtitle>{{component.subtitle}}&nbsp;
+                            {{component.subtitle}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{component.description}}
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions *ngIf="component.cardaction">
+                        <div *ngFor="let action of component.cardaction">
+                            <button mat-button>{{action.name}}</button>
+                        </div>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
